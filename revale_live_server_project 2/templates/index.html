@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10110f">
+  <meta name="description" content="Get an indicative used-car resale value in seconds."><meta name="color-scheme" content="light">
+  <title>Revale — Used Car Resale Value Estimator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="nav wrap">
+    <a class="brandmark" href="#"><span class="brand-icon">r.</span><span>revale<span class="dot">.</span></span></a>
+    <nav><a href="#how">How it works</a><a href="#estimate">Estimate</a></nav>
+    <a class="nav-cta" href="#estimate">Value my car <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="live-dot"></span> USED-CAR VALUE, REIMAGINED</div>
+        <h1>Your car has a<br><em>next chapter.</em></h1>
+        <p class="hero-sub">Find out what it could be worth today. A clean, quick estimate powered by your car's age, mileage and details.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#estimate">Get my estimate <span>↘</span></a><span class="micro-note">Takes about 60 seconds</span></div>
+        <div class="trust-row"><div class="avatars"><span>R</span><span>₹</span><span>✓</span></div><p><strong>Clear numbers.</strong> No pressure, no guesswork.</p></div>
+      </div>
+      <div class="hero-visual reveal" id="heroVisual">
+        <div class="visual-label"><span>01 / THE VALUE JOURNEY</span><span>SCROLL TO EXPLORE ↓</span></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-glow"></div>
+        <svg class="car-illustration" id="heroCar" viewBox="0 0 780 360" role="img" aria-label="Stylised illustration of a modern car">
+          <defs><linearGradient id="carPaint" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7f4e9"/><stop offset=".45" stop-color="#aeb5ad"/><stop offset="1" stop-color="#555f59"/></linearGradient><linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#30403e"/><stop offset="1" stop-color="#111b1a"/></linearGradient></defs>
+          <ellipse cx="397" cy="285" rx="280" ry="30" fill="#000" opacity=".28"/>
+          <path d="M105 229 L128 191 Q144 178 201 169 L280 102 Q300 85 336 82 L466 82 Q493 83 519 109 L585 174 L643 191 Q664 201 674 229 L671 256 Q669 269 650 270 L127 270 Q104 267 102 250Z" fill="url(#carPaint)" stroke="#f2f2e9" stroke-opacity=".5" stroke-width="2"/>
+          <path d="M230 163 L294 108 Q306 98 333 97 L382 97 L382 164Z" fill="url(#glass)" stroke="#74817b" stroke-width="2"/>
+          <path d="M397 97 L463 97 Q483 98 502 119 L546 164 L397 164Z" fill="url(#glass)" stroke="#74817b" stroke-width="2"/>
+          <path d="M388 96 L388 166" stroke="#7f8981" stroke-width="4"/>
+          <path d="M145 201 Q214 181 288 178 L537 178 Q590 183 638 204" fill="none" stroke="#fff" stroke-opacity=".48" stroke-width="3"/>
+          <path d="M111 231 L153 225 L176 235 L164 247 L110 246Z" fill="#f4d9a0"/><path d="M615 220 L659 230 L658 244 L616 244Z" fill="#f17b61"/>
+          <path d="M273 187 L269 262 M551 187 L566 262" stroke="#737e76" stroke-width="3"/>
+          <path d="M196 262 Q194 218 237 218 Q279 218 279 262Z" fill="#202725"/><circle cx="237" cy="258" r="29" fill="#111514" stroke="#9da49d" stroke-width="5"/><circle cx="237" cy="258" r="12" fill="#c7ccc3"/><circle cx="237" cy="258" r="4" fill="#606963"/>
+          <path d="M524 262 Q522 218 565 218 Q607 218 607 262Z" fill="#202725"/><circle cx="565" cy="258" r="29" fill="#111514" stroke="#9da49d" stroke-width="5"/><circle cx="565" cy="258" r="12" fill="#c7ccc3"/><circle cx="565" cy="258" r="4" fill="#606963"/>
+          <path d="M135 252 L174 255 M625 254 L654 251" stroke="#f4f4eb" stroke-width="3" opacity=".7"/>
+        </svg>
+        <div class="floating-card card-top"><span class="mini-icon">↗</span><div><small>YOUR CAR'S STORY</small><strong>Worth knowing.</strong></div></div>
+        <div class="floating-card card-bottom"><div class="pulse-bars"><i></i><i></i><i></i><i></i><i></i></div><div><small>VALUE SIGNAL</small><strong>Age + mileage + model</strong></div></div>
+        <div class="scroll-hint"><span class="scroll-line"></span> KEEP GOING</div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Service highlights"><div class="ticker-track"><span>REALISTIC ESTIMATES</span><b>✳</b><span>MADE FOR INDIA</span><b>✳</b><span>NO PRESSURE</span><b>✳</b><span>REALISTIC ESTIMATES</span><b>✳</b><span>MADE FOR INDIA</span><b>✳</b><span>NO PRESSURE</span><b>✳</b></div></section>
+
+    <section class="how-section wrap" id="how">
+      <div class="section-heading reveal"><div><div class="eyebrow">A LITTLE LESS GUESSING</div><h2>Three details.<br><em>A clearer picture.</em></h2></div><p>Resale value isn't random. Start with the things that shape it most, then get an indicative price range.</p></div>
+      <div class="steps">
+        <article class="step reveal"><span class="step-number">01</span><div class="step-art age-art"><div class="year-tile">2021<span>MODEL YEAR</span></div><div class="tiny-line"></div><span class="art-caption">Time leaves a mark.</span></div><h3>Age of the car</h3><p>Newer models generally retain more value, depending on demand and condition.</p></article>
+        <article class="step reveal"><span class="step-number">02</span><div class="step-art km-art"><div class="km-ring"><strong>42k</strong><span>KM DRIVEN</span></div><svg viewBox="0 0 220 100"><path d="M5 70 Q40 15 75 60 T145 48 T215 20" fill="none" stroke="#c4f16c" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 7"/></svg></div><h3>Distance travelled</h3><p>Usage helps tell the story. Lower kilometres can help, but maintenance matters too.</p></article>
+        <article class="step reveal"><span class="step-number">03</span><div class="step-art model-art"><div class="model-chip">SUV <span>↗</span></div><div class="model-chip faded">HATCHBACK</div><div class="model-chip faded">SEDAN</div><span class="art-caption">Every model is different.</span></div><h3>Make & model</h3><p>Brand, model, fuel type and transmission all influence market value.</p></article>
+      </div>
+    </section>
+
+    <section class="estimate-section" id="estimate">
+      <div class="estimate-grid wrap">
+        <div class="estimate-intro reveal"><div class="eyebrow"><span class="live-dot"></span> YOUR TURN</div><h2>Let's find its<br><em>next value.</em></h2><p>Tell us a little about your car. We'll use those details to calculate an indicative resale estimate.</p><div class="disclaimer-mini"><span>ⓘ</span> Estimates are a starting point, not a dealer quote.</div><div class="decor-number">₹</div></div>
+        <div class="form-panel reveal">
+          <div class="form-progress"><span>CAR DETAILS</span><span id="stepLabel">01 — 02</span></div><div class="progress-track"><span></span></div>
+          <form id="estimateForm">
+            <div class="form-page active" data-page="1">
+              <div class="field-row"><label>Brand<select id="brand" name="brand" required><option value="">Choose brand</option>{% for brand in brands %}<option value="{{ brand }}">{{ brand }}</option>{% endfor %}</select></label><label>Model<select id="model" name="model" required disabled aria-describedby="modelHelp"><option value="">Choose brand first</option></select></label></div>
+              <div class="field-row"><label>Manufacturing year<select id="year" name="year" required>{% for y in range(current_year, 1999, -1) %}<option value="{{ y }}" {% if y == current_year - 4 %}selected{% endif %}>{{ y }}</option>{% endfor %}</select></label><label>Odometer reading<div class="input-unit"><input name="km_driven" type="number" min="0" max="1000000" value="45000" required><span>km</span></div></label></div>
+              <div class="field-row"><label>Fuel type<select name="fuel"><option>Petrol</option><option>Diesel</option><option>CNG</option><option>Electric</option><option>LPG</option></select></label><label>Transmission<select name="transmission"><option>Manual</option><option>Automatic</option></select></label></div>
+              <button type="button" class="button button-primary full" id="nextBtn">Continue to details <span>→</span></button>
+            </div>
+            <div class="form-page" data-page="2">
+              <div class="field-row"><label>Ownership<select name="owner"><option>First owner</option><option>Second owner</option><option>Third owner</option><option>Fourth or more</option></select></label><label>Engine capacity<div class="input-unit"><input name="engine_cc" type="number" min="500" max="8000" value="1200" required><span>cc</span></div></label></div>
+              <div class="field-row"><label>Average mileage<div class="input-unit"><input name="mileage_kmpl" type="number" min="1" max="60" step="0.1" value="18" required><span>km/l</span></div></label><label>Seating capacity<select name="seats"><option>5</option><option>4</option><option>6</option><option>7</option><option>8</option><option>9</option></select></label></div>
+              <div class="form-actions"><button type="button" class="button button-quiet" id="backBtn">← Back</button><button type="submit" class="button button-primary" id="submitBtn">Estimate value <span>↗</span></button></div>
+            </div>
+          </form>
+          <div class="result-panel" id="resultPanel" aria-live="polite" hidden>
+            <div class="result-icon">✓</div><div class="eyebrow">YOUR INDICATIVE RESALE VALUE</div><div class="result-price" id="resultPrice">₹ —</div><p class="range-text">Likely range <strong id="resultRange">₹ — to ₹ —</strong></p><div class="result-divider"></div><p class="result-note" id="resultNote"></p><button class="button button-primary full" id="resetBtn">Estimate another car <span>↻</span></button>
+          </div>
+          <p class="form-error" id="formError" role="alert"></p>
+        </div>
+      </div>
+    </section>
+    <section class="closing wrap reveal"><div class="closing-mark">r.</div><div><h2>Good decisions start<br>with <em>good information.</em></h2><p>Get a useful starting point before your next move.</p></div><a class="button button-light" href="#estimate">Check my car <span>↑</span></a></section>
+  </main>
+  <footer class="footer wrap"><a class="brandmark" href="#"><span class="brand-icon">r.</span><span>revale<span class="dot">.</span></span></a><p>Made for better-informed car decisions.</p><span>© {{ current_year }} Revale · Demo project</span></footer>
+  <script>window.MODELS_BY_BRAND = {{ models_by_brand | tojson }};</script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
